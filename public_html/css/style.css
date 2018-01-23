@@ -178,3 +178,40 @@ form.signin input::-webkit-input-placeholder { color:#bbb; text-shadow:0 0 2px #
     font-size: 0.7em;
     color: #999 !important;
 }
+.navbar-cus{
+      background-color:#3863a0;
+      
+  }
+h1{
+      color:#3863a0;
+  }
+#div1 a{
+  color:white;
+}
+#myCarousel{
+  background-color: black;
+}
+body{
+  font-family: Myriad Pro;
+}
+p{
+  font-size: 18px;
+  }
+#parallax{
+  
+   /* The image used */
+background-image: url("../img/3.jpg");
+
+
+
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.imgevents
+{
+    height:500px;
+}
