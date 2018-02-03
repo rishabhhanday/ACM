@@ -43,8 +43,15 @@
  <!--Events hai ye -->
 <?php
   $id=$_GET['id'];
-  $qu=mysqli_query($dbc,'SELECT * FROM `EVENTS` WHERE sno='.(int)$id)or die(mysqli_error($dbc)) ;
+  $totrowq=mysqli_query($dbc,'SELECT count(sno) FROM EVENTS')or die(mysqli_error($dbc));
   $total_img=0;
+  while($row=mysqli_fetch_array($totrowq))
+  {
+    $totrow=$row['count(sno)'];
+  }
+  $id=$totrow-$id+1;
+  $id=$id<0?$id*-1:$id;
+  $qu=mysqli_query($dbc,'SELECT * FROM `EVENTS` WHERE sno='.(int)$id)or die(mysqli_error($dbc)) ;
   while($row_img=mysqli_fetch_array($qu))
  {	 
  	$total_img=$row_img['event_img'];
@@ -94,6 +101,7 @@
   </a>
 
 </div>
+</div>
         <div class="container-fluid">
             <div class="row" style="background-color: #f3f3f3;box-shadow: 8px 10px 10px #999">
             <br><br>
@@ -103,6 +111,7 @@
               <center>  <p><?php echo $event_about?></p></center>
             </div>
             <br><br> <br><br> <br><br>
+  </div>
   </div>
     </body>
 </html>
