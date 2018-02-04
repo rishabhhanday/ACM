@@ -29,7 +29,7 @@
             <div id="div1" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="events.php?id=0">Events</a></li>
+                <li><a href="events.php?page=1">Events</a></li>
                 <li><a href="about.html">Our Team</a></li>
                 <li><a href="http://www.medicaps.ac.in">Medicaps University</a></li>
             </ul>
@@ -42,7 +42,7 @@
 
  <!--Events hai ye -->
 <?php
-  $id=$_GET['id'];
+  $id=$_GET['page'];
   $totrowq=mysqli_query($dbc,'SELECT count(sno) FROM EVENTS')or die(mysqli_error($dbc));
   $total_img=0;
   while($row=mysqli_fetch_array($totrowq))
@@ -106,12 +106,34 @@
             <div class="row" style="background-color: #f3f3f3;box-shadow: 8px 10px 10px #999">
             <br><br>
             <center><h1><?php echo $event_title?></h1></center>
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
+              <div class="col-xs-2">
+              <a href=<?php 
+              $ido=$_GET['page'];
+              if($ido==1)
+                  $ans=$totrow;
+              else
+                  $ans=$ido-1;
+              echo'events.php?page='.$ans;?>>
+            <img src="img/pre.png" class="img-responsive">
+            </a>
+            </div>
+            <div class="col-xs-8">
+            <br>
               <center>  <p><?php echo $event_about?></p></center>
             </div>
-            <br><br> <br><br> <br><br>
-  </div>
-  </div>
+          <div class="col-xs-2">
+          <a href=<?php
+            $ido=$_GET['page'];
+            if($ido==$totrow)
+              $ans=1;
+            else
+              $ans=$ido+1;
+            echo "events.php?page=".$ans;
+          ?>>
+          <img src="img/next.png" class="img-responsive">
+          </a>
+          </div>
+          </div>
+            </div>
     </body>
 </html>
