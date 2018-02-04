@@ -22,15 +22,50 @@
 	</head>
 	<body>
 		<div id="container-fluid">
+		<div class="jumbotron col-xs-12 textcenter">
+		Please go through this before uploading event.
+		<ul><li>First Give a suitable name of the event</li>
+		<li>Add proper description of the event</li>
+		<li>Choose Total number of images that you want to upload(max 10)</li> 
+		<li>Upload those images</li> 
+		<li>Upload images only in JPG format, you might face glitches if other formats are uploaded, Convert your images to JPG if necessary.</li>
+		</div>
 			<div id="row" class="alignform">
 				<form method="POST" action="submitnewevent.php" enctype="multipart/form-data">
-						<div class="col-xs-6 col-xs-offset-6">Event Title:</div><input type="text" name="event_title1" class="col-xs-9 col-xs-offset-1">
-						<div class="col-xs-6 col-xs-offset-6 clear-fix">Event Description:</div><input type="text" name="event_about1" class="col-xs-9 col-xs-offset-1 aboutinput">
-						<div class="col-xs-6 col-xs-offset-6 clear-fix">Choose Number of Images to upload(Maximum 10)</div><input type="Number" name="event_img1" id="event_img" class="col-xs-9 col-xs-offset-1" min=1 max=10>
-						<a href="#" onclick="addtags()" class="clear-fix col-xs-6 col-xs-offset-6">Add Images</a>
-						<div class="clear-fix col-xs-12" id="uploadimg">
+						<div class="row clear-fix">
+						<center>
+						<div class="col-xs-12">
+						Event Title:
 						</div>
-						<input type="submit" class="col-xs-9 col-xs-offset-1">
+						</center>
+							<input required="" type="text" name="event_title1" class="col-xs-10 col-xs-offset-1" placeholder="Name of event">
+						</div>
+						<div class="row clear-fix">
+						<center>
+						<div class="col-xs-12">
+						Event Description:
+						</div>
+						</center>
+							<textarea required="" type="text" name="event_about1" class="col-xs-10 col-xs-offset-1 aboutinput" placeholder="Description of event">
+								
+							</textarea>
+						</div>
+						<div class="row clear-fix">
+						<center>
+						<div class="col-xs-12">
+						Choose Number of Images to upload(Maximum 10)
+						</div>
+						</center>
+							<input required="" type="Number" name="event_img1" id="event_img" class="col-xs-10 col-xs-offset-1" min=1 max=10 onblur="addtags();" placeholder="Number of images to upload">
+						</div>
+						<div class="row clear-fix" id="uploadimg">
+						</div>
+						<br/>
+						<center>
+						<div class="col-xs-10 col-xs-offset-1">
+						<input type="submit">
+						</div>
+						</center>
 				</form>
 			</div>
 		</div>
@@ -49,7 +84,7 @@
 	                var ipt = document.createElement("input");
 	                ipt.type = "file";
 	                ipt.name = "img"+ i;
-	                ipt.class="col-xs-9 col-xs-offset-1 clear-fix"
+	                ipt.class="col-xs-10 col-xs-offset-1 clear-fix"
 	  //              addimg.appendChild(ipt); 
 	//                addimg.appendChild(document.createElement("br"));
 		            document.getElementById("uploadimg").appendChild(ipt);
