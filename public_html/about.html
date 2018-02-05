@@ -1,34 +1,29 @@
-<?php
-session_start();
-if((isset($_SESSION["username"]))){
-} 
-else{
-    header("Location:admin.php");
-}
-?>
 <!DOCTYPE html>
-<html>
-	<head> 
-		<meta charset="utf-8">
-		<title>ACM</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-		<link rel="stylesheet" href="css/style.css">
-		<script>
-			$(document).ready(function()
-			{
-				$("#show1").click(function()
-				{
-					$("#hideit").toggle(1000);
-				});
-			});
-		</script>
-	</head>
-	<body>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html >
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script>
+$(document).ready(function(){
+    $("#show1").click(function(){
+        $("#hideit").toggle(1000);
+    });
+    
+});
+</script>
+</head>
+<body>
+    
         <nav class="navbar navbar-default navbar-cus navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -47,67 +42,134 @@ else{
                 <li><a href="http://www.medicaps.ac.in">Medicaps University</a></li>
             </ul>
             <br><br></div>
-
+            
         </div>
-
+        
     </nav>
-		<div id="container-fluid" class="toppad">
-		<div class="alert alert-info col-xs-12 textcenter  shadow ">
-		Please go through this before uploading event.
-		<ul><li>First Give a suitable name of the event</li>
-		<li>Add proper description of the event</li>
-		<li>Choose Total number of images that you want to upload(max 10)</li> 
-		<li>Upload those images</li> 
-		<li>Upload images only in JPG format, you might face glitches if other formats are uploaded, Convert your images to JPG if necessary.</li>
-		</ul>
-		</div>
-			<div id="row" class="alignform">
-				<form method="POST" action="submitnewevent.php" enctype="multipart/form-data">
-				<div class="form-group">
-						<label for="event_title1">Event Name:</label>
-						<input required type="text" name="event_title1" id="event_title1" class="col-xs-10 col-xs-offset-1 form-control" placeholder="Name of event">
-				</div>
-				<div class="form-group">
-						<label for="event_about1">Event Description:</label>
-							<textarea required name="event_about1" id="event_about1" class="col-xs-10 col-xs-offset-1 form-control" placeholder="Description of event"></textarea>
-				</div>
-				<div class="form-group">
-						<label for="event_img">Choose Number of Images to upload(Maximum 10):</label>
-							<input required type="Number" name="event_img1" id="event_img" class="col-xs-10 col-xs-offset-1 form-control" min=1 max=10 onblur="addtags();" placeholder="Number of images to upload">
-				</div>
-						<div class="row clear-fix" id="uploadimg">
-						</div>
-						<br/>
-						<center>
-						<div class="col-xs-10 col-xs-offset-1">
-						<button type="submit" class="btn btn-default">Submit</button>
-						</div>
-						</center>
-				</div>
-				</form>
-			</div>
-		</div>
-		<script>
-			function addtags()
-			{
-				var total=document.getElementById("event_img").value;
-				var addimg=document.getElementById("uploadimg");
-				 while (addimg.hasChildNodes()) 
-				{
-                	addimg.removeChild(addimg.lastChild);
-            	}	
-                 for (i=1;i<=total;i++)
-                 {
-                    addimg.appendChild(document.createTextNode("Image " + i));
-	                var ipt = document.createElement("input");
-	                ipt.type = "file";
-	                ipt.name = "img"+ i;
-	                ipt.class="col-xs-10 col-xs-offset-1 clear-fix";
-	                addimg.appendChild(ipt); 
-	                addimg.appendChild(document.createElement("br"));
-		//            document.getElementById("uploadimg").appendChild(ipt);
-            }
-			}
-		</script>
-	</body>
+    <br><br><br>
+<div class="container-fluid" style="background-color: #f9f9f9">
+<center>
+    <h1 style="color:#3863a0"><b>OUR PEOPLE ARE OUR BIGGEST ASSET</b></h1>
+</center>
+    <br><br>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4" style="background-color: white;box-shadow: 10px 10px 8px #888888;">
+           <br> <center>
+                <img src="img/chair.jpg" class="img-rounded" style="height:250px;width:200px">
+        <h4>
+           Madhav Kabra
+        </h4>
+        <h3>
+            <b style="color:#3863a0">Chair Acm-Medicaps</b>
+        </h3>
+    </center>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    
+    <br><br><br><br>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-4" style="background-color: white;box-shadow: 10px 10px 8px #888888;">
+           <br> <center>
+                <img src="img/wchair.jpg" class="img-rounded" style="height:250px;width:200px">
+        <h4>
+         Vidushi Jain 
+        </h4>
+        <h3>
+            <b style="color:#3863a0">Chair Acm-W-Medicaps</b>
+        </h3>
+    </center>
+        </div>
+        <div class="col-md-2">
+            
+        </div>
+        <div class="col-md-4" style="background-color: white;box-shadow: 10px 10px 8px #888888;">
+           <br> <center>
+                <img src="img/wsecretary.jpg" class="img-rounded" style="height:250px;width:200px">
+        <h4>
+           Shubhi Maheshwari
+        </h4>
+        <h3>
+            <b style="color:#3863a0">Secretary Acm-W-Medicaps</b>
+        </h3>
+    </center>
+        </div>
+    </div>
+    <br><br><br><br>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-md-3" style="background-color: white;box-shadow: 10px 10px 8px #888888;">
+           <br> <center>
+                <img src="img/vicechair.jpg" class="img-rounded" style="height:250px;width:200px">
+        <h4>
+           Priyanshu Gandhi
+        </h4>
+        <h3>
+            <b style="color:#3863a0">Vice Chair Acm-Medicaps</b>
+        </h3>
+    </center>
+        </div><div class="col-md-1"></div><div class="col-md-4" style="background-color: white;box-shadow: 10px 10px 8px #888888;">
+           <br> <center>
+                <img src="img/treasurer.jpg" class="img-rounded" style="height:250px;width:200px">
+        <h4>
+           Suyash Gupta
+        </h4>
+        <h3>
+            <b style="color:#3863a0">Treasurer Acm-Medicaps</b>
+        </h3>
+    </center><br>
+        </div><div class="col-md-1"></div><div class="col-md-3" style="background-color: white;box-shadow: 10px 10px 8px #888888;">
+           <br> <center>
+                <img src="img/secretary.jpg" class="img-rounded" style="height:250px;width:200px">
+        <h4>
+           Mukul Palit
+        </h4>
+        <h3>
+            <b style="color:#3863a0">Secretary Acm-Medicaps</b>
+        </h3>
+    </center>
+        </div>
+         </div>
+        </div>
+        
+    </div>
+    <br><br>
+</div>
+    
+         <div class="container-fluid navbar-cus">
+            <br><br>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                    <br><br>
+                    <img src="img/4.jpg" class="img-responsive">
+                </div>
+                <div class="col-md-2">
+                    <h3 style="color:white">Site Map</h3><hr/>
+                    <a href="#"><p style="color:white">Home</p></a>
+                    <a href="#"><p style="color:white">Events</p></a>
+                    <a href="#"><p style="color:white">Our Teams</p></a>
+                    <a href="#"><p style="color:white">Medicaps University</p></a>
+                    <p style="color:white" id="show1">Development Team <i class="caret"></i></p>
+                    <div id="hideit" style="display:none">
+                    <p style="margin-left:0.5cm;color:white"><i class="fa fa-circle" style="font-size:7px"></i> Rishabh Handay</p>
+                    <p style="margin-left:0.5cm;color:white"><i class="fa fa-circle" style="font-size:7px"></i> Manas Bindal</p>
+                    <p style="margin-left:0.5cm;color:white"><i class="fa fa-circle" style="font-size:7px"></i> Anurag Phadnis</p>
+                    </div>
+               <br> </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    
+                  <br><br><br>  <img src="img/1.png" class="img-responsive">
+                </div>
+            </div>
+            
+        </div>
+        
+        
+</body>
 </html>
