@@ -11,6 +11,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="css/style.css">
+     <script>
+$(document).ready(function(){
+    $("#show1").click(function(){
+        $("#hideit").toggle(1000);
+    });
+    
+});
+</script>
    </head>
     <body>
     <?php
