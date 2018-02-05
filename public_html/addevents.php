@@ -52,7 +52,7 @@ else{
         
     </nav>
         
-		<div id="container-fluid toppad">
+		<div id="container-fluid" class="toppad">
 		<div class="alert alert-info col-xs-12 textcenter  shadow ">
 		Please go through this before uploading event.
 		<ul><li>First Give a suitable name of the event</li>
