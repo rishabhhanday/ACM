@@ -1,0 +1,68 @@
+<?php
+session_start();
+if((isset($_SESSION["username"]))){
+} 
+else{
+    header("Location:admin.php");
+}
+?>
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="utf-8">
+		<title>ACM</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="css/style.css">
+		<script>
+			$(document).ready(function()
+			{
+				$("#show1").click(function()
+				{
+					$("#hideit").toggle(1000);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="container-fluid">
+			<div id="row" class="alignform">
+				<form method="POST" action="submitnewevent.php" enctype="multipart/form-data">
+						<div class="col-xs-6 col-xs-offset-6">Event Title:</div><input type="text" name="event_title1" class="col-xs-9 col-xs-offset-1">
+						<div class="col-xs-6 col-xs-offset-6 clear-fix">Event Description:</div><input type="text" name="event_about1" class="col-xs-9 col-xs-offset-1 aboutinput">
+						<div class="col-xs-6 col-xs-offset-6 clear-fix">Choose Number of Images to upload(Maximum 10)</div><input type="Number" name="event_img1" id="event_img" class="col-xs-9 col-xs-offset-1" min=1 max=10>
+						<a href="#" onclick="addtags()" class="clear-fix col-xs-6 col-xs-offset-6">Add Images</a>
+						<div class="clear-fix col-xs-12" id="uploadimg">
+						</div>
+						<input type="submit" class="col-xs-9 col-xs-offset-1">
+				</form>
+			</div>
+		</div>
+		<script>
+			function addtags()
+			{
+				var total=document.getElementById("event_img").value;
+				var addimg=document.getElementById("uploadimg");
+				 while (addimg.hasChildNodes()) 
+				{
+                	addimg.removeChild(addimg.lastChild);
+            	}	
+                 for (i=1;i<=total;i++)
+                 {
+                    addimg.appendChild(document.createTextNode("Image " + i));
+	                var ipt = document.createElement("input");
+	                ipt.type = "file";
+	                ipt.name = "img"+ i;
+	                ipt.class="col-xs-9 col-xs-offset-1 clear-fix"
+	  //              addimg.appendChild(ipt); 
+	//                addimg.appendChild(document.createElement("br"));
+		            document.getElementById("uploadimg").appendChild(ipt);
+            }
+			}
+		</script>
+	</body>
+</html>
