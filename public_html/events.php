@@ -19,7 +19,7 @@
         <nav class="navbar navbar-default navbar-cus navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a href="#" class="navbar-brand" style="color:white">ACM</a>
+                <a href="https://www.acm.org/" class="navbar-brand" style="color:white">ACM</a>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#div1">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -58,6 +58,7 @@
   	$event_title=$row_img['event_title'];
   	$event_about=$row_img['event_about'];
   }
+  mysqli_close($dbc);
 ?>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -135,5 +136,34 @@
           </div>
           </div>
             </div>
+        <div class="container-fluid navbar-cus">
+            <br><br>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                    <br><br>
+                    <img src="img/4.jpg" class="img-responsive">
+                </div>
+                <div class="col-md-2">
+                    <h3 style="color:white">Site Map</h3><hr/>
+                    <a href="#"><p style="color:white">Home</p></a>
+                    <a href="#"><p style="color:white">Events</p></a>
+                    <a href="#"><p style="color:white">Our Teams</p></a>
+                    <a href="#"><p style="color:white">Medicaps University</p></a>
+                    <p style="color:white" id="show1">Development Team <i class="caret"></i></p>
+                    <div id="hideit" style="display:none">
+                    <p style="margin-left:0.5cm;color:white"><i class="fa fa-circle" style="font-size:7px"></i> Rishabh Handay</p>
+                    <p style="margin-left:0.5cm;color:white"><i class="fa fa-circle" style="font-size:7px"></i> Manas Bindal</p>
+                    <p style="margin-left:0.5cm;color:white"><i class="fa fa-circle" style="font-size:7px"></i> Anurag Phadnis</p>
+                    </div>
+               <br> </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    
+                  <br><br><br>  <img src="img/1.png" class="img-responsive">
+                </div>
+            </div>
+            
+        </div>    
     </body>
 </html>
