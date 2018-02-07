@@ -149,6 +149,9 @@ form.signin .tweetbox input {
 
 form.signin input:-moz-placeholder { color:#bbb; text-shadow:0 0 2px #000; }
 form.signin input::-webkit-input-placeholder { color:#bbb; text-shadow:0 0 2px #000;  }
+.pText{
+	font-size:20px;
+}
 
 .button { 
     background: -moz-linear-gradient(center top, #f3f3f3, #dddddd);
@@ -214,4 +217,53 @@ background-size: cover;
 .imgevents
 {
     height:500px;
+}
+.alignform
+{
+    text-align: center;
+}
+.aboutinput
+{
+    height: auto;
+}
+.textcenter
+{
+    text-align: center;
+}
+.jtronbg
+{
+    background-color: #1177aa;
+    padding-top: 50px;
+}
+.shadow
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+input
+{
+    width:auto;
+    max-width: 100%;
+}
+textarea
+{
+    width:auto;
+    max-width: 100%;
+}
+.header{
+    background-color:#fcfcfc;
+}
+.blueText{
+    color:#3863a0;
+}
+.navbar-cus{
+    background-color: #3863a0;
+    color:white;
+}
+#div1 ul li a{
+    background-color: #3863a0;
+    color:white;
+}
+.white{
+    color:white;
+	background-color: #3863a0;
 }
