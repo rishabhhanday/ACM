@@ -15,12 +15,45 @@
   
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="css/style.css">
+    <!-- animsition.css -->
+<link rel="stylesheet" href="dist/css/animsition.min.css">
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- animsition.js -->
+<script src="dist/js/animsition.min.js"></script>
+
   <script>
 $(document).ready(function(){
     $("#show1").click(function(){
         $("#hideit").toggle(1000);
     });
     
+});
+</script>
+    <script>
+$(document).ready(function() {
+  $(".animsition").animsition({
+    inClass: 'fade-in-up',
+    outClass: 'fade-out-up',
+    inDuration: 1500,
+    outDuration: 800,
+    linkElement: '.animsition-link',
+    // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+    loading: true,
+    loadingParentElement: 'body', //animsition wrapper element
+    loadingClass: 'animsition-loading',
+    loadingInner: '', // e.g '<img src="loading.svg" />'
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
+  });
 });
 </script>
     </head>
@@ -65,9 +98,7 @@ $(document).ready(function(){
                         
                     </ul>
                 </li>
-				
                 <li><a href="http://www.medicaps.ac.in">Medicaps University</a></li>
-				<li><a href="#">Contact Us</a></li>
             </ul>
             </div>
             
@@ -188,36 +219,64 @@ $(document).ready(function(){
             <br><br> 
             </div>
         </div>
-        <div class="container-fluid navbar-cus">
-            <br><br>
+
+        <!--Footer-->
+     <div class="">
+    <footer >
+        <div class="fottermain">
             <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-3">
-                    <br><br>
-                    <img src="img/medicapsLogo.png" class="img-responsive">
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                <h2>Medi-Caps University</h2><hr>
+                <div class="animsition">
+                <p  class="animsition-link" data-animsition-out-class="fade-in-up" data-animsition-out-duration="2000">
+                    Medi-Caps University is a premier central Indian management and engineering institute. Baptized in an endearing spirit, Medi-Caps Institute of Technology and Management took its first step in July 2000 with a vision to design future scientifically. Within a short span of eighteen years the Institute has attained a strong footing amongst all the technical colleges of Madhya Pradesh. It is situated on a beautiful hillock with a pleasant environment, on the Agra-Bombay National Highway, 15 km. away from Indore Railway Station, a historic town, now known as the commercial, industrial and trade capital of Madhya Pradesh.
+                </p>
                 </div>
-                <div class="col-md-2">
-                    <h3 style="color:white">Site Map</h3><hr/>
-                    <a href="#"><p style="color:white">Home</p></a>
-                    <a href="#"><p style="color:white">Events</p></a>
-                    <a href="#"><p style="color:white">Our Teams</p></a>
-                    <a href="#"><p style="color:white">Medicaps University</p></a>
-                    <p style="color:white" id="show1">Development Team <i class="caret"></i></p>
-                    <div id="hideit" style="display:none">
-                    <p style="margin-left:0.5cm;color:white"><i class="fa fa-circle" style="font-size:7px"></i> Rishabh Handay</p>
-                    <p style="margin-left:0.5cm;color:white"><i class="fa fa-circle" style="font-size:7px"></i> Manas Bindal</p>
-                    <p style="margin-left:0.5cm;color:white"><i class="fa fa-circle" style="font-size:7px"></i> Anurag Phadnis</p>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <h2>Tags</h2><hr class=hrtitle>
+                    <div class="animsition">
+                    <ul  class="animsition-link taglist" data-animsition-out-class="fade-in-up" data-animsition-out-duration="2000">
+                        <center><li><a href="#" class="taglink">Home</a></li><br/></center>
+                        <center><li><a href="#" class="taglink">Events</a></li><br/></center>
+                    </ul>
                     </div>
-               <br> </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-3">
-                    
-                  <br><br><br>  <img src="img/1.png" class="img-responsive">
+                    <div class="animsition">
+                    <center>
+                        <a href="#" style="color:#ffffff;"  class="animsition-link" data-animsition-out-class="fade-in-up" data-animsition-out-duration="2000"><button class="btn facebook">Facebook</button></a> &nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <a href="#" style="color:#ffffff;" class="animsition-link" data-animsition-out-class="fade-in-up" data-animsition-out-duration="2000"><button class="btn twitter">Twitter</button></a>
+                    </div>
+                    </center>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <h2>Contact Us</h2><hr>
+                    <div class="animsition">
+                    <p class="animsition-link"   data-animsition-out-class="fade-in-up" data-animsition-out-duration="2000">
+                        Medi-Caps University<br/>
+                        A.B. Road, Pigdamber, Rau<br/>
+                        Indore - 453331<br/>
+                        Phone No.: 0731-4259500, 2856294<br/>
+                        Fax: 0731-4259501<br/>
+                        e-mail: info@medicaps.ac.in<br/> 
+                    </p>
+                    </div>
                 </div>
             </div>
-            
         </div>
-        
-        
+        <div class="footerlow">
+            <div class="row">
+            <center>
+                <div class="col-xs-12">
+                <p>
+                    Copyright &copy;2018, Medi-Caps University ACM chapter. All Rights Reserved.
+                </p>
+                </div>
+            </center>
+            </div>
+        </div>
+    </footer>
+</div>
+<!--Footer ends-->   
     </body>
 </html>
