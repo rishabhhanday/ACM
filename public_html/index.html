@@ -25,10 +25,28 @@ $(document).ready(function(){
 </script>
     </head>
     <body>
-        <nav class="navbar navbar-default navbar-cus navbar-fixed-top">
+        <div class="container-fluid header">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-2">
+                    <img src="img/4.jpg.png" class="img-responsive">
+                </div>
+                <div class="col-md-6">
+                    
+                        <h1 class="blueText"><b>Medi-Caps ACM Student Chapter</b></h1>
+                        <h3 class="blueText">One of the largest ACM Student Chapters</h3>
+                    
+                    
+                </div>
+                <div class="col-md-2"><br>
+                    <img src="img/1.png" class="img-responsive">
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-default navbar-cus">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a href="#" class="navbar-brand" style="color:white">ACM</a>
+                <a href="https://www.acm.org/" class="navbar-brand" style="color:white">ACM</a>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#div1">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -38,11 +56,18 @@ $(document).ready(function(){
             <div id="div1" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="events.php?id=0">Events</a></li>
-                <li><a href="about.html">Our Team</a></li>
+                <li><a href="events.php?page=1">Events</a></li>
+                <li class="dropdown"><a href="about.html" class="dropdown-toggle" data-toggle="dropdown">Team <i class="caret"></i></a>
+                    <ul class="dropdown-menu navbar-cus">
+                        <li class="navbar-cus"><a href="#">Our Team</a></li>
+                        <li><a href="#">Web Masters</a></li>
+                        <li><a href="#">Faculty Members</a></li>
+                        
+                    </ul>
+                </li>
                 <li><a href="http://www.medicaps.ac.in">Medicaps University</a></li>
             </ul>
-            <br><br></div>
+            </div>
             
         </div>
         
@@ -59,7 +84,7 @@ $(document).ready(function(){
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-     <center> <img src="img/1.jpg" alt="Chania" class="img-responsive imgevents"></center>
+     <center> <img src="img/1.jpg" alt="Chania" class="img-responsive"></center>
       <div class="carousel-caption">
         <h3>ACM</h3>
         
@@ -67,7 +92,7 @@ $(document).ready(function(){
     </div>
 
     <div class="item">
-    <center>  <img src="img/2.jpg" alt="Chicago" class="img-responsive imgevents"></center>
+    <center>  <img src="img/2.jpg" alt="Chicago" class="img-responsive"></center>
       <div class="carousel-caption">
         <h3>ACM</h3>
         
@@ -103,11 +128,11 @@ $(document).ready(function(){
                 <div class="col-md-1"></div>
                 <div class="col-md-6">
                     <br> <br><br>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    <p class="pText">There are many reasons to join ACM. When you become a member, you become a part of the dynamic changes that are transforming our world, by helping to shape the future of computing.</p><p class="pText"> ACM provides the tools and resources to help get you there, by advancing your career and enriching your knowledge with life-long learning resources.</p><p class="pText"> ACM Professional and Student members enjoy these benefits: Networking Opportunities: A vast network of over 110,000 highly dedicated student and professional peers ACM's Career, Job Centre, where you will find targeted job opportunities and more.</p> <p class="pText">The opportunity to join one or more of ACM's Special Interest Groups in 37 specialty areas of IT Become a member of computing community through one of hundreds of Professional and Student Chapters worldwide Unique volunteering opportunities to gain hands-on experience and knowledge of the marketplace.</p>
                 </div>
                 <div class="col-md-1"></div>
                 <div class="col-md-3">
-                    <img src="img/2.png" class="img-responsive"><br><br>
+                    <img src="img/2.png" class=""><br><br>
                 </div>
             </div>
         </div>
@@ -167,7 +192,7 @@ $(document).ready(function(){
                 <div class="col-md-2"></div>
                 <div class="col-md-3">
                     <br><br>
-                    <img src="img/4.jpg" class="img-responsive">
+                    <img src="img/4.jpg.png" class="img-responsive">
                 </div>
                 <div class="col-md-2">
                     <h3 style="color:white">Site Map</h3><hr/>
