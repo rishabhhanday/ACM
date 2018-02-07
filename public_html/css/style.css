@@ -169,6 +169,40 @@ form.signin input::-webkit-input-placeholder { color:#bbb; text-shadow:0 0 2px #
     width:214px;
 }
 .button:hover { background:#ddd; }
+.header{
+
+    background-color:#fcfcfc;
+
+}
+
+.blueText{
+
+    color:#3863a0;
+
+}
+
+.navbar-cus{
+ 
+   background-color: #3863a0;
+
+    color:white;
+
+}
+
+#div1 ul li a{
+
+    background-color: #3863a0;
+
+    color:white;
+
+}
+
+.white{
+
+    color:white;
+
+}
+
 
 #tweetText{
     color: #999 !important;
@@ -228,7 +262,11 @@ background-size: cover;
 {
     color:#d0d0d0;
     -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;      
+    transition-duration: 0.4s; 
+		font-size:18px;
+}
+.fontsize{
+	font-size:15px;
 }
 .taglink:hover
 {
